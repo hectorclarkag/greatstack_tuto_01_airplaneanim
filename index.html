@@ -48,7 +48,28 @@
                 <img src="./images/balloon.png" alt="" class="ballon2">
                 <img src="./images/balloon.png" alt="" class="ballon3">
             </div>
+
+            <img src="./images/pause.png" alt="pause" id="myImg">
         </div>
     </div>
+
+    <script>
+        var myImg = document.getElementById("myImg");
+
+        myImg.onclick = function() {
+            if(clouds.style.webkitAnimationPlayState == "paused") {
+                clouds.style.webkitAnimationPlayState = "running";
+                airplane.style.webkitAnimationPlayState = "running";
+                hotairballon.style.webkitAnimationPlayState = "running";
+                myImg.src = './images/pause.png';
+            } else {
+                clouds.style.webkitAnimationPlayState = "paused";
+                airplane.style.webkitAnimationPlayState = "paused";
+                hotairballon.style.webkitAnimationPlayState = "paused";
+                myImg.src = './images/play.png';
+            }
+            
+        }
+    </script>
 </body>
 </html>
